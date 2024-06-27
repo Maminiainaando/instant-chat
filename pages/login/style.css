@@ -1,0 +1,51 @@
+h1{
+    color: blue;
+    font-size: x-large;
+    text-align: center;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border: solid 2px black;
+    box-shadow: 0px 0px 2px 2px black;
+    border-radius: 5%;
+    gap: 10px;
+    width: 40%;
+    margin: 0 auto; 
+    padding: 10px 13px;
+}
+form div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around; 
+}
+form .input-style{
+    box-shadow: 0px 0px 1px 1px black;
+    padding: 5px 13px;
+    border-radius: 5px;
+    margin-right: 1%;
+    position: right;
+}
+form .div-position{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; 
+    gap: 20px;
+}
+form button{
+    background-color: white;
+    color: black;
+    border: solid 2px black;
+    width: 30%;
+    margin: 0 auto;
+    transition: 1s;
+    font-size: larger;
+    padding: 5px 3px;
+}
+form button:hover{
+    color: white;
+    background-color: black;
+    cursor: pointer;
+}
+
