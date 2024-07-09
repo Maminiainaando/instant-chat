@@ -14,6 +14,7 @@ create table users(
     id_user serial primary key,
     username varchar(255),
     email varchar(255),
+    status_user varchar(255),
     password varchar(255)
 );
  
@@ -22,5 +23,6 @@ create table messages(
     messages varchar(255),
     id_user int references users(id_user),
     sending_date timestamp not null,
-    date_created timestamp
+    date_created timestamp,
+    type_message varchar(255)
 );

@@ -1,6 +1,9 @@
 
        var socket=io();
-       
+       const email = document.getElementById("email");
+       const names=document.getElementById("name");
+       const password=document.getElementById("password"); 
+
        const text=document.getElementById("text");
         const typing=document.getElementById("typing");
         const hello=document.getElementById("hello");
@@ -18,7 +21,7 @@
             message: "hello every one"
         });
        });
-
+       
        socket.on("message-event",(data)=>{
         const nouveau = document.createElement("span");
         nouveau.textContent=data.name + " :: "+data.message+" ! ";
