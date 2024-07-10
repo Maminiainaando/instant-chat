@@ -2,19 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-idth, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./style.css">
-    <script src="../../script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
 </head>
 <body>
     <h1>Welcome to Instant Chat</h1>
-    <main>
+    <div data-aos="flip-left"
+    data-aos-easing="ease-out-cubic"
+    data-aos-duration="1000"data-aos="zoom-in-down">
         <form method="get" action="http://localhost:3001/">
             <div class="form-group">
                 <div class="div-position">
-                    <label for="email">Email</label>
-                    <label for="name">User Name</label>
+                    <label for="email"><i class="bi bi-envelope-paper"></i> Email</label>
+                    <label for="name"><i class="bi bi-person"></i> User Name</label>
                     <label for="password">Password</label>
                 </div>
                 <div class="div-position">
@@ -23,9 +28,16 @@
                     <input type="password" name="password" id="password" class="input-style" required>
                 </div>
             </div>
-            <button id="login" type="submit">Login</button>
+            <button id="login" type="submit" data-aos="flip-down">Login</button>
         </form> 
-    </main>
+    </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        AOS.init();
+    </script>
     <script src="./script.js"></script>
+    <script src="../../script.js"></script>
+
 </body> 
 </html>

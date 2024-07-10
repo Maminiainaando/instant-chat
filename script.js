@@ -21,7 +21,6 @@
             message: "hello every one"
         });
        });
-       
        socket.on("message-event",(data)=>{
         const nouveau = document.createElement("span");
         nouveau.textContent=data.name + " :: "+data.message+" ! ";
