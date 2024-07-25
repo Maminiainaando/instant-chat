@@ -11,9 +11,12 @@
   "description": "",
   "dependencies": {
     "aos": "^2.3.4",
+    "axios": "^1.7.2",
     "bootstrap-icons": "^1.11.3",
     "cors": "^2.8.5",
     "express": "^4.19.2",
+    "fs": "^0.0.1-security",
+    "multer": "^1.4.5-lts.1",
     "node-fetch": "^2.7.0",
     "pg": "^8.12.0",
     "socket.io": "^4.7.5"

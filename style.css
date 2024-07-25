@@ -54,7 +54,9 @@ main {
     justify-content: space-between;
     align-items: center;
 }
-.username {
+.username a{
+    text-decoration: none;
+    color: black;
     font-weight: bold;
 }
 .status {
@@ -79,14 +81,23 @@ main {
     background-color: white; 
 }
 #chat {
-    overflow-y: auto;
+    overflow-y:auto;
     height: 600px;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 10px; 
     background-color: #f9f9f9;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px; 
+    display: flex;
+    flex-direction: column;
+    column-gap: 2%;
+    scroll-behavior: smooth;
+}
+#chat span {
+    border: 1px solid #333;
+    padding: 3px 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 3%;
 }
 #chat > * {
     margin-bottom: 10px;
@@ -137,4 +148,14 @@ footer a {
 }
 footer a:hover {
     text-decoration: underline;
+}
+#chatting p{
+    text-align: center;
+    color: blue;
+}
+.storedusername{
+    color: blue
+}
+.message-content{
+color: red;
 }

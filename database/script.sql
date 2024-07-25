@@ -10,19 +10,20 @@ psql -d postgres -U chat
 create database chat_app;
 \c chat_app;
 
-create table users(
-    id_user serial primary key,
-    username varchar(255),
-    email varchar(255),
-    status_user varchar(255),
-    password varchar(255)
+CREATE TABLE users (
+    id_user SERIAL PRIMARY KEY,
+    username VARCHAR(255),
+    email VARCHAR(255),
+    gender varchar(255),
+    status_user VARCHAR(255) default "offline"
+    password VARCHAR(255),
+    image_user BYTEA
 );
- 
+
 create table messages(
     id_message serial primary key,
     messages varchar(255),
     id_user int references users(id_user),
     sending_date timestamp not null,
-    date_created timestamp,
     type_message varchar(255)
 );

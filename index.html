@@ -4,147 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css">
 </head> 
 <body>
     <header>
-        <h1>Hello <span id="name"></span>! Let's talk <i class="bi bi-chat-square"></i></h1>
+        <h1>Hello <span id="name"></span>! Let's talk <i class="bi bi-chat-square"></i>   <button onclick="fetchUsers()">eh oh </button>  </h1>
     </header>
     <main>
         <section id="list-user">
-            <ul>
+            <ul id="list-users">
                 <li>
                     <img src="./image/1711391011672.jpg" alt="User Image">
                     <div class="user-info">
-                        <span class="username">John Doe</span>
+                        <span class="username"><a href="">John Doe</a></span>
                         <span class="status online"></span>
                     </div>
                 </li>
                 <li>
                     <img src="./image/1711391011672.jpg" alt="User Image">
                     <div class="user-info">
-                        <span class="username">John Doe</span>
-                        <span class="status offline"></span>
-                    </div>
-                </li>
-                <li>
-                    <img src="./image/1711391011672.jpg" alt="User Image">
-                    <div class="user-info">
-                        <span class="username">John Doe</span>
-                        <span class="status online"></span>
-                    </div>
-                </li>
-                <li>
-                    <img src="./image/1711391011672.jpg" alt="User Image">
-                    <div class="user-info">
-                        <span class="username">John Doe</span>
-                        <span class="status offline"></span>
-                    </div>
-                </li>
-                <li>
-                    <img src="./image/1711391011672.jpg" alt="User Image">
-                    <div class="user-info">
-                        <span class="username">John Doe</span>
-                        <span class="status online"></span>
-                    </div>
-                </li>
-                <li>
-                    <img src="./image/1711391011672.jpg" alt="User Image">
-                    <div class="user-info">
-                        <span class="username">John Doe</span>
-                        <span class="status offline"></span>
-                    </div>
-                </li>
-                <li>
-                    <img src="./image/1711391011672.jpg" alt="User Image">
-                    <div class="user-info">
-                        <span class="username">John Doe</span>
-                        <span class="status online"></span>
-                    </div>
-                </li>
-                <li>
-                    <img src="./image/1711391011672.jpg" alt="User Image">
-                    <div class="user-info">
-                        <span class="username">John Doe</span>
-                        <span class="status offline"></span>
-                    </div>
-                </li>
-                <li>
-                    <img src="./image/1711391011672.jpg" alt="User Image">
-                    <div class="user-info">
-                        <span class="username">John Doe</span>
-                        <span class="status online"></span>
-                    </div>
-                </li>
-                <li>
-                    <img src="./image/1711391011672.jpg" alt="User Image">
-                    <div class="user-info">
-                        <span class="username">John Doe</span>
-                        <span class="status offline"></span>
-                    </div>
-                </li>
-                <li>
-                    <img src="./image/1711391011672.jpg" alt="User Image">
-                    <div class="user-info">
-                        <span class="username">John Doe</span>
-                        <span class="status online"></span>
-                    </div>
-                </li>
-                <li>
-                    <img src="./image/1711391011672.jpg" alt="User Image">
-                    <div class="user-info">
-                        <span class="username">John Doe</span>
-                        <span class="status offline"></span>
-                    </div>
-                </li>
-                <li>
-                    <img src="./image/1711391011672.jpg" alt="User Image">
-                    <div class="user-info">
-                        <span class="username">John Doe</span>
-                        <span class="status online"></span>
-                    </div>
-                </li>
-                <li>
-                    <img src="./image/1711391011672.jpg" alt="User Image">
-                    <div class="user-info">
-                        <span class="username">John Doe</span>
-                        <span class="status offline"></span>
-                    </div>
-                </li>
-                <li>
-                    <img src="./image/1711391011672.jpg" alt="User Image">
-                    <div class="user-info">
-                        <span class="username">John Doe</span>
-                        <span class="status online"></span>
-                    </div>
-                </li>
-                <li>
-                    <img src="./image/1711391011672.jpg" alt="User Image">
-                    <div class="user-info">
-                        <span class="username">John Doe</span>
-                        <span class="status offline"></span>
-                    </div>
-                </li>
-                <li>
-                    <img src="./image/1711391011672.jpg" alt="User Image">
-                    <div class="user-info">
-                        <span class="username">John Doe</span>
-                        <span class="status online"></span>
-                    </div>
-                </li>
-                <li>
-                    <img src="./image/1711391011672.jpg" alt="User Image">
-                    <div class="user-info">
-                        <span class="username">John Doe</span>
+                        <span class="username"><a href="">Jane</a></span>
                         <span class="status offline"></span>
                     </div>
                 </li>
             </ul>
         </section>
         <section id="chatting">
+            <i class="bi bi-emoji-wink"></i>
             <div id="chat">
-                <i class="bi bi-emoji-wink"></i>
+                
             </div>
             <div id="write">
                 <input type="text" id="text"> 
@@ -156,8 +45,9 @@
         </section>
     </main>
     <footer>
-        &copy; by <a href="git://github.com/Maminiainaando">Aina RAJAONARISON</a>
+        &copy; by <a href="git://github.com/Maminiainaando">Aina RAJAONARISON  </a>
     </footer>
+    
     <script src="/socket.io/socket.io.js"></script>
     <script src="./script.js"></script>
 </body>
