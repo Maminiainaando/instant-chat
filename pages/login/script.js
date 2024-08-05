@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const names = document.getElementById("name");
     const password = document.getElementById("password"); 
     const login = document.getElementById("login");
-
+    
     login.addEventListener("click", async () => {
         try {
             event.preventDefault();
@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             if (jsonResponse !== null) {
                 localStorage.setItem('username',jsonResponse.username);
-                window.location.href = "http://localhost:3001"; // Redirect to the chat page
+                window.location.href = "http://localhost:3001";
             } else {
                 console.log(jsonResponse);
                 alert('Failed to log in. Please check your credentials.');
