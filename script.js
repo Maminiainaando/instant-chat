@@ -11,17 +11,43 @@ function fetchUsers() {
       .then(response => response.json())
       .then(data => displayUsers(data))
       .catch(error => console.error('Error:', error));
-  }
-/**
- * li : img=>
- *           img 
- *      div.user-info=>
- *           span.username 
- *                 a
- *           span.status,span.online
- */
-const storedUsername = localStorage.getItem('username');
-console.log(localStorage.getItem.name);
+}
+function displayUsers(users) {
+    const listUsers = document.querySelector('#list-users');
+    listUsers.innerHTML = '';
+
+    users.forEach(user => {
+        const listItem = document.createElement('li');
+        const image = document.createElement('img');
+        image.src = user.image_user ? `data:image/jpeg;base64,${user.image_user}` : './default-image.jpg';
+        image.alt = 'User Image';
+        listItem.appendChild(image);
+
+        const userInfoDiv = document.createElement('div');
+        userInfoDiv.classList.add('user-info');
+
+        const usernameSpan = document.createElement('span');
+        usernameSpan.classList.add('username');
+        usernameSpan.innerHTML = `<a href="#">${user.username}</a>`;
+        userInfoDiv.appendChild(usernameSpan);
+
+        const statusSpan = document.createElement('span');
+        statusSpan.classList.add('status');
+        // Ajout de la classe en fonction du statut
+        statusSpan.classList.add(user.status_user === 'online' || user.status_user === 'active' ? 'online' : 'offline');
+        userInfoDiv.appendChild(statusSpan);
+
+        listItem.appendChild(userInfoDiv);
+        listUsers.appendChild(listItem);
+
+        // Les logs sont utiles pour le débogage
+        console.log('User image data:', user.image_user);
+        console.log('Image source:', image.src);
+    });
+}
+
+document.addEventListener('DOMContentLoaded', fetchUsers);
+
 name.innerHTML = storedUsername;
 typing.addEventListener("click", () => {
     socket.emit("typing-event", {
