@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css">
 </head> 
 <body>
-     <header>
-        <h1>Hello <span id="name"></span>! Let's talk </h1>
+    <header>
+        <h1>Hello <span id="name"></span>! Let's talk <button id="test">click me</button></h1>
     </header>
     <main>
         <section id="list-user">
@@ -39,7 +39,7 @@
                 <input type="text" id="text"> 
                 <div>
                     <button id="typing"><i class="bi bi-pencil-square"></i> Notify typing event</button>
-                    <button id="hello"><i class="bi bi-hand-thumbs-up"></i> Say hello</button>
+                    <button id="hello"><i class="bi bi-hand-thumbs-up"></i>Send</button>
                 </div>    
             </div>
         </section>
@@ -47,8 +47,10 @@
     <footer>
         &copy; by <a href="git://github.com/Maminiainaando">Aina RAJAONARISON  </a>
     </footer>
-    
     <script src="/socket.io/socket.io.js"></script>
+    <script>
+        var socket=io();
+    </script>
     <script src="./script.js"></script>
 </body>
 </html>

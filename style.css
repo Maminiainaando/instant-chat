@@ -70,7 +70,7 @@ main {
     background-color: green;
 }
 .offline {
-    background-color: rgb(64, 62, 62);
+    background-color:black;
 }
 #chatting {
     width: 70%;
@@ -94,11 +94,17 @@ main {
     scroll-behavior: smooth;
 }
 #chat span {
-    border: 1px solid #333;
-    padding: 3px 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 3%;
+    display: inline-block; 
+    border: 1px solid #ccc; 
+    padding: 8px 12px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08); 
+    border-radius: 12px; 
+    background-color: #f9f9f9; 
+    margin-bottom: 10px; 
+    max-width: 80%;
+    word-wrap: break-word; 
 }
+
 #chat > * {
     margin-bottom: 10px;
 }
